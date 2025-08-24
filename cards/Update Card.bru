@@ -1,0 +1,35 @@
+meta {
+  name: Update Card
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PATH}}/:cardId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  cardId: 1
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "expiration": 60,
+    "maxStamp": 5,
+    "description": "Esto es una descripcion nueva",
+    "restrictions": "less than 3",
+    "reward": "a thing",
+    "name":"The best new card name",
+    "isActive": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

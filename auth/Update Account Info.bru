@@ -1,0 +1,30 @@
+meta {
+  name: Update Account Info
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{PATH}}/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "fullName": "Juan de Las casas",
+    "profileImageURL": "https://acumulapp-storage.s3.us-east-2.amazonaws.com/1756073457139-botttsNeutral-1723151557069.png"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

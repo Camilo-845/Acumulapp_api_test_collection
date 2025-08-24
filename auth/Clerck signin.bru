@@ -1,0 +1,19 @@
+meta {
+  name: Clerck signin
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{PATH}}/clerk-signin
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"token":"eyJhbGciOiJSUzI1NiIsImNhdCI6ImNsX0I3ZDRQRDExMUFBQSIsImtpZCI6Imluc18zMVR2a29iRkdDcHBXaWFHcElzSU5yQWdJakQiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NTU1NjM3NzMsImZ2YSI6Wzk5OTk5LC0xXSwiaWF0IjoxNzU1NTYzNzEzLCJpc3MiOiJodHRwczovL2Vuam95ZWQtZ3J1Yi0zNi5jbGVyay5hY2NvdW50cy5kZXYiLCJuYmYiOjE3NTU1NjM3MDMsInNpZCI6InNlc3NfMzFVMGtNdUc4M2VRcFg3ZVZZeHNGWFRaamM4Iiwic3ViIjoidXNlcl8zMVR5aHZZdDJ5dEFkR3phUkZDcUpSYVowWVoiLCJ2IjoyfQ.yPIlQWE0vooRAan27ZJqjE9KsPNJX03NXYjmjBQhSTLK4Kv5CuGv4OatFg3rGLKHaT8r6WDpBF8kS707YLY9S3trmPlvROWVVpynh5B_tnsNganoqwM8lixLuWAexdHJ0pDARgHlhDQbvOynfoebeMYBRiG9qVPnc_1g_Crpj5U3LxdO0nK-tq4cS2S5elOW7YSfijZIVP1Vb9H8h79h7esxKJHGomcusTu7MctDcEZ9bREfnRcNKpVenduVlWNcewR7Ltrj0ZuWXYmB2hUSgIyXAvTcjxVnw1jN4yEnuLdD41VortgLuF44a2ccJdF0D7g8ohk_uiuKH6g8NS2i9w"}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: create client account
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{PATH}}/register/client
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email":"hola@gmail.com",
+    "password":"hola123",
+    "fullName":"hola k ase"
+  }
+}
+
+script:post-response {
+  if(res.status == 200){
+    bru.setEnvVar("TOKEN",res.body.token)
+  }
+}

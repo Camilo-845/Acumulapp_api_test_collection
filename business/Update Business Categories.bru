@@ -1,0 +1,29 @@
+meta {
+  name: Update Business Categories
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{PATH}}/:idBusiness/categories
+  body: json
+  auth: bearer
+}
+
+params:path {
+  idBusiness: 1
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "categories":[1,2,3]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

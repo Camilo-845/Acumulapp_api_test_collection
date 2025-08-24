@@ -1,0 +1,23 @@
+meta {
+  name: Unmark As Favorite Business
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{PATH}}/unmark-as-favorite/:businessId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  businessId: 1
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+settings {
+  encodeUrl: true
+}

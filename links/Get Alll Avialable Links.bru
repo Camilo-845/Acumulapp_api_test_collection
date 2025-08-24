@@ -1,0 +1,19 @@
+meta {
+  name: Get Alll Avialable Links
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PATH}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+settings {
+  encodeUrl: true
+}

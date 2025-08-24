@@ -1,0 +1,19 @@
+meta {
+  name: Get Client Card By UniqueCode
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{PATH}}/unique-code/:uniqueCode
+  body: none
+  auth: bearer
+}
+
+params:path {
+  uniqueCode: LK21KWBA
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}

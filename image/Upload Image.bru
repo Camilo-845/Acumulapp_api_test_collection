@@ -1,0 +1,27 @@
+meta {
+  name: Upload Image
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{PATH}}/upload
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:multipart-form {
+  image: @file(/home/camilosar/Imágenes/Profiles/botttsNeutral-1723069972280.png)
+}
+
+body:file {
+  file: @file(/home/camilosar/Imágenes/Profiles/botttsNeutral-1723151557069.png) @contentType(image/png)
+}
+
+settings {
+  encodeUrl: true
+}

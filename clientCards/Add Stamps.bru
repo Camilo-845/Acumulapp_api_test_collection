@@ -1,0 +1,29 @@
+meta {
+  name: Add Stamps
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{PATH}}/add-stamp/:uniqueCode
+  body: json
+  auth: bearer
+}
+
+params:path {
+  uniqueCode: NEIDVUCA
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "stamps": 2
+  }
+}
+
+settings {
+  encodeUrl: true
+}

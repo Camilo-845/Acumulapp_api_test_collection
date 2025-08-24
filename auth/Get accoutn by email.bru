@@ -1,0 +1,19 @@
+meta {
+  name: Get accoutn by email
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{PATH}}/email/:email
+  body: none
+  auth: bearer
+}
+
+params:path {
+  email: hola@gmail.com
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Get All ClientCards by Client
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PATH}}/client?idClient=1&idState=4
+  body: none
+  auth: bearer
+}
+
+params:query {
+  idClient: 1
+  idState: 4
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}

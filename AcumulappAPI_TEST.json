@@ -1,0 +1,1139 @@
+{
+  "info": {
+    "name": "AcumulappAPI_TEST",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "Clerck signin",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/clerk-signin",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "clerk-signin"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"token\":\"eyJhbGciOiJSUzI1NiIsImNhdCI6ImNsX0I3ZDRQRDExMUFBQSIsImtpZCI6Imluc18zMVR2a29iRkdDcHBXaWFHcElzSU5yQWdJakQiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NTU1NjM3NzMsImZ2YSI6Wzk5OTk5LC0xXSwiaWF0IjoxNzU1NTYzNzEzLCJpc3MiOiJodHRwczovL2Vuam95ZWQtZ3J1Yi0zNi5jbGVyay5hY2NvdW50cy5kZXYiLCJuYmYiOjE3NTU1NjM3MDMsInNpZCI6InNlc3NfMzFVMGtNdUc4M2VRcFg3ZVZZeHNGWFRaamM4Iiwic3ViIjoidXNlcl8zMVR5aHZZdDJ5dEFkR3phUkZDcUpSYVowWVoiLCJ2IjoyfQ.yPIlQWE0vooRAan27ZJqjE9KsPNJX03NXYjmjBQhSTLK4Kv5CuGv4OatFg3rGLKHaT8r6WDpBF8kS707YLY9S3trmPlvROWVVpynh5B_tnsNganoqwM8lixLuWAexdHJ0pDARgHlhDQbvOynfoebeMYBRiG9qVPnc_1g_Crpj5U3LxdO0nK-tq4cS2S5elOW7YSfijZIVP1Vb9H8h79h7esxKJHGomcusTu7MctDcEZ9bREfnRcNKpVenduVlWNcewR7Ltrj0ZuWXYmB2hUSgIyXAvTcjxVnw1jN4yEnuLdD41VortgLuF44a2ccJdF0D7g8ohk_uiuKH6g8NS2i9w\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get accoutn by email",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/email/:email",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "email",
+                ":email"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "email",
+                  "value": "hola@gmail.com"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Refresh token",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/refresh",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "refresh"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJob2xhQGdtYWlsLmNvbSIsInVzZXJUeXBlIjoiY2xpZW50IiwiY29sbGFib3JhdG9yRGV0YWlscyI6W10sImlhdCI6MTc1NTQ5ODgwNSwiZXhwIjoxNzYwNjgyODA1fQ.Ak0n-U_IGf3vzCVflKfyiTTdgbn_0eWEVxTCcyZwLLs\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "create client account",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/register/client",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "register",
+                "client"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\":\"hola@gmail.com\",\n  \"password\":\"hola123\",\n  \"fullName\":\"hola k ase\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "login",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/login?userType=business",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "login?userType=business"
+              ],
+              "query": [
+                {
+                  "key": "userType",
+                  "value": "business"
+                }
+              ],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\":\"hola@gmail.com\",\n  \"password\":\"hola123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "create Business",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/register/business",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "register",
+                "business"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\":\"hola@gmail.com\",\n  \"password\":\"hola123\",\n  \"fullName\":\"hola k ase\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Update Account Info",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/:id",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                ":id"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fullName\": \"Juan de Las casas\",\n  \"profileImageURL\": \"https://acumulapp-storage.s3.us-east-2.amazonaws.com/1756073457139-botttsNeutral-1723151557069.png\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "business",
+      "item": [
+        {
+          "name": "Get All Business",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Get Business categories",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Update Business",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/:businessId",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                ":businessId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "businessId",
+                  "value": "1"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\":\"The bestBusiness\",\n  \"email\":\"thebusiness@gmail.com\",\n  \"description\":\"The best business no mather what they said\",\n  \"address\":\"the best Adrees daa..\",\n  \"categories\":[1,2,3,4]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Update Business Categories",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/:idBusiness/categories",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                ":idBusiness",
+                "categories"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "idBusiness",
+                  "value": "1"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"categories\":[1,2,3]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Update Business Links",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/:idBusiness/links",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                ":idBusiness",
+                "links"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "idBusiness",
+                  "value": "1"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"links\": [\n    {\n      \"idLink\": 1,\n      \"value\": \"https://bestBusiness.com\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All Favorite Business",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/favorites",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "favorites"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Mark As Favorite Business",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/mark-as-favorite/:businessId",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "mark-as-favorite",
+                ":businessId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "businessId",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Is Favorite Business",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/is-favorite/:businessId",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "is-favorite",
+                ":businessId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "businessId",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Unmark As Favorite Business",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/unmark-as-favorite/:businessId",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "unmark-as-favorite",
+                ":businessId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "businessId",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "cards",
+      "item": [
+        {
+          "name": "Create Card",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"isActive\": \"false\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "GetAllCards copy",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/states",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "states"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "GetAllCards",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/business/:id?isActive=true",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "business",
+                ":id?isActive=true"
+              ],
+              "query": [
+                {
+                  "key": "isActive",
+                  "value": "true"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Card",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/:cardId",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                ":cardId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "cardId",
+                  "value": "1"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"expiration\": 60,\n  \"maxStamp\": 5,\n  \"description\": \"Esto es una descripcion nueva\",\n  \"restrictions\": \"less than 3\",\n  \"reward\": \"a thing\",\n  \"name\":\"The best new card name\",\n  \"isActive\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "clientCards",
+      "item": [
+        {
+          "name": "Activate Clent Card",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/activate/:uniqueCode",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "activate",
+                ":uniqueCode"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "uniqueCode",
+                  "value": "4VGL778R"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Stamps",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/add-stamp/:uniqueCode",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "add-stamp",
+                ":uniqueCode"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "uniqueCode",
+                  "value": "NEIDVUCA"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"stamps\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Create Client Card",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idClient\":1,\n  \"idCard\":10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All ClientCards by Client",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/client?idClient=1&idState=4",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "client?idClient=1&idState=4"
+              ],
+              "query": [
+                {
+                  "key": "idClient",
+                  "value": "1"
+                },
+                {
+                  "key": "idState",
+                  "value": "4"
+                }
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Get Card Stats",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/stats?businessId=1",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "stats?businessId=1"
+              ],
+              "query": [
+                {
+                  "key": "businessId",
+                  "value": "1"
+                }
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Get Client Card By UniqueCode",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/unique-code/:uniqueCode",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "unique-code",
+                ":uniqueCode"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "uniqueCode",
+                  "value": "LK21KWBA"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Mark ass Redeemed",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/mark-as-redeemed/:uniqueCode",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "mark-as-redeemed",
+                ":uniqueCode"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "uniqueCode",
+                  "value": "NEIDVUCA"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "image",
+      "item": [
+        {
+          "name": "Upload Image",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}/upload",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [
+                "upload"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "value": [
+                    "/home/camilosar/Imágenes/Profiles/botttsNeutral-1723069972280.png"
+                  ],
+                  "disabled": false,
+                  "type": "default"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "rating",
+      "item": [
+        {
+          "name": "Create Rating",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idBusiness\": 1,\n  \"valoration\": 5\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "links",
+      "item": [
+        {
+          "name": "Get Alll Avialable Links",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "{{TOKEN}}",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{PATH}}",
+              "protocol": "",
+              "host": [
+                "{{PATH}}"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "PATH",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "key": "TOKEN",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "key": "URL",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Get Card Stats
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{PATH}}/stats?businessId=1
+  body: none
+  auth: bearer
+}
+
+params:query {
+  businessId: 1
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+settings {
+  encodeUrl: true
+}

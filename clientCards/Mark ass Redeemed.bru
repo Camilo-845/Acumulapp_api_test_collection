@@ -1,0 +1,23 @@
+meta {
+  name: Mark ass Redeemed
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{PATH}}/mark-as-redeemed/:uniqueCode
+  body: none
+  auth: bearer
+}
+
+params:path {
+  uniqueCode: NEIDVUCA
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+settings {
+  encodeUrl: true
+}

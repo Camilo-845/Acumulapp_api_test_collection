@@ -1,0 +1,23 @@
+meta {
+  name: GetAllCards
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PATH}}/business/:id?isActive=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  isActive: true
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}

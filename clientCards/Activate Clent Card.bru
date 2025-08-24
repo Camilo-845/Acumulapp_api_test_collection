@@ -1,0 +1,19 @@
+meta {
+  name: Activate Clent Card
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{PATH}}/activate/:uniqueCode
+  body: none
+  auth: bearer
+}
+
+params:path {
+  uniqueCode: 4VGL778R
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}

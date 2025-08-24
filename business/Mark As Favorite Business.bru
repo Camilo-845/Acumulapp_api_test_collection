@@ -1,0 +1,23 @@
+meta {
+  name: Mark As Favorite Business
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{PATH}}/mark-as-favorite/:businessId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  businessId: 1
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+settings {
+  encodeUrl: true
+}

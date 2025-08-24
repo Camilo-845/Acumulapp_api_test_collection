@@ -1,0 +1,23 @@
+meta {
+  name: Is Favorite Business
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{PATH}}/is-favorite/:businessId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  businessId: 1
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+settings {
+  encodeUrl: true
+}

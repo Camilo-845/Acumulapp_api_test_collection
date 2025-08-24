@@ -1,0 +1,26 @@
+meta {
+  name: Create Rating
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{PATH}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "idBusiness": 1,
+    "valoration": 5
+  }
+}
+
+settings {
+  encodeUrl: true
+}

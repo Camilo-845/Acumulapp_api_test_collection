@@ -1,0 +1,15 @@
+meta {
+  name: Get Business categories
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{PATH}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}

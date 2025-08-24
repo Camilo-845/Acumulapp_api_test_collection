@@ -1,0 +1,28 @@
+meta {
+  name: login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{PATH}}/login?userType=business
+  body: json
+  auth: inherit
+}
+
+params:query {
+  userType: business
+}
+
+body:json {
+  {
+    "email":"hola@gmail.com",
+    "password":"hola123"
+  }
+}
+
+script:post-response {
+  if(res.status == 200){
+    bru.setEnvVar("TOKEN",res.body.token)
+  }
+}

@@ -1,0 +1,34 @@
+meta {
+  name: Update Business Links
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{PATH}}/:idBusiness/links
+  body: json
+  auth: bearer
+}
+
+params:path {
+  idBusiness: 1
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "links": [
+      {
+        "idLink": 1,
+        "value": "https://bestBusiness.com"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

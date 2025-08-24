@@ -1,0 +1,15 @@
+meta {
+  name: Get All Favorite Business
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{PATH}}/favorites
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
