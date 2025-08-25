@@ -1,0 +1,23 @@
+meta {
+  name: Get Business Active Subscription
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PATH}}/is-active/:busienssId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  busienssId: 1
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+settings {
+  encodeUrl: true
+}
